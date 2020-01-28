@@ -34,4 +34,4 @@ USER appuser
 COPY . .
 
 # Run the executable
-ENTRYPOINT ["python", "-m", "http.server", "8000"]
+ENTRYPOINT ["python", "-m", "http.server"]

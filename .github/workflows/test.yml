@@ -38,6 +38,6 @@ jobs:
 
       - name: Test image
         run: |
-          docker run --rm -d -p 8000:8000 best_practices
-          docker ps
-          curl --fail http://localhost:8000/Pipfile
+          docker run --rm -d --name test_container -p 8000:8000 best_practices
+          docker run --link test_container:test_container waisbrot/wait
+          curl --fail http://localhost:8000

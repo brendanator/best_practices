@@ -2,6 +2,7 @@ import numpy as np
 
 print(np.ones([2, 2]))
 
+
 def fib(n: int) -> int:
     if n < 2:
         return 1
